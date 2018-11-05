@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {Button, View, StyleSheet} from 'react-native';
-import authStore from '../store/authStore';
+import {Button, View, StyleSheet, Text} from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
 export default class Home extends Component {
     static navigationOptions = {
-        title: 'Trang chủ',
+        title: 'Home',
         drawerLabel: 'Home',
     };
 
@@ -16,9 +15,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Button title='Đăng xuất' onPress={() => {
-                    authStore.logout();
-                }}/>
+                <Text>Home</Text>
                 <Button title='Show DatePicker' onPress={this._showDateTimePicker}/>
                 <DateTimePicker
                     isVisible={this.state.isDateTimePickerVisible}

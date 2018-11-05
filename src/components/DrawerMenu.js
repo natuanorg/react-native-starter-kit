@@ -9,8 +9,8 @@ export default class DrawerMenu extends Component {
         super(props);
         this.state = {
             screens: [
-                {router: 'Home', name: 'Trang chủ'},
-                {router: 'Settings', name: 'Cài đặt'}
+                {router: 'Home', name: 'Home'},
+                {router: 'Settings', name: 'Settings'}
             ]
         }
     }

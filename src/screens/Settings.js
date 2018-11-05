@@ -4,14 +4,14 @@ import {View, StyleSheet, Text} from 'react-native';
 export default class Settings extends Component {
 
     static navigationOptions = {
-        title: 'Cài đặt',
-        drawerLabel: 'Cài đặt',
+        title: 'Settings',
+        drawerLabel: 'Settings',
     };
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>Cài đặt</Text>
+                <Text>Settings</Text>
             </View>
         );
     }
