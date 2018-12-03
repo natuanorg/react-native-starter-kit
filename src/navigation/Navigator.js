@@ -1,10 +1,21 @@
 import { StackActions, NavigationActions } from 'react-navigation';
 import type { NavigationParams, NavigationRoute } from 'react-navigation'; // eslint-disable-line
+import { DrawerActions } from 'react-navigation-drawer';
 
 let _container; // eslint-disable-line
 
 function setContainer(container: Object) {
     _container = container;
+}
+
+function toggleDrawer() {
+    _container.dispatch(DrawerActions.toggleDrawer());
+}
+
+function goBack() {
+    _container.dispatch(
+        NavigationActions.back(),
+    );
 }
 
 function reset(routeName: string, params?: NavigationParams) {
@@ -61,4 +72,6 @@ export default {
     navigate,
     reset,
     getCurrentRoute,
+    toggleDrawer,
+    goBack
 };

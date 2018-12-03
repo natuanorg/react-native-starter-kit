@@ -1,5 +1,10 @@
 import React from 'react';
-import { createSwitchNavigator, createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import {
+    createSwitchNavigator,
+    createStackNavigator,
+    createDrawerNavigator,
+    createAppContainer
+} from 'react-navigation';
 import Home from "../screens/Home";
 import Settings from "../screens/Settings";
 import DrawerMenu from "../components/DrawerMenu";
@@ -24,16 +29,18 @@ const MainStack = createDrawerNavigator({
     drawerWidth: 300
 });
 
-export const AppNavigation = createSwitchNavigator(
-    {
-        Main: MainStack,
-    },
-    {
-        initialRouteName: 'Main',
-        navigationOptions: {
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            },
+export const AppNavigation = createAppContainer(
+    createSwitchNavigator(
+        {
+            Main: MainStack,
+        },
+        {
+            initialRouteName: 'Main',
+            navigationOptions: {
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }
         }
-    }
+    )
 );

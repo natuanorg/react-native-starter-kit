@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "rename": "node ./bin/rename.js",
-    "clear": "watchman watch-del-all && npm start --reset-cache",
+    "clear": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && npm cache clean --force && npm install && npm start -- --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "dev-ios": "react-native run-ios",
-    "dev-android": "react-native run-android"
+    "iosx": "react-native run-ios --simulator='iPhone X'",
+    "ios": "react-native run-ios --simulator='iPhone 6'",
+    "android": "react-native run-android"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -16,16 +17,17 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
     "react-native-firebase": "^5.0.0",
+    "react-native-gesture-handler": "^1.0.10",
     "react-native-loading-spinner-overlay": "^0.5.2",
     "react-native-modal-datetime-picker": "^6.0.0",
-    "react-navigation": "^2.12.1"
+    "react-navigation": "^3.0.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
+    "fs-extra": "^6.0.1",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.49.0",
     "react-test-renderer": "16.6.0-alpha.8af6728",
-    "fs-extra": "^6.0.1",
     "replace-in-file": "^3.4.0"
   },
   "jest": {
