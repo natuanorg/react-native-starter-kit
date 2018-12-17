@@ -7,17 +7,20 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Alert} from 'react-native';
+import {StyleSheet, Alert, StatusBar} from 'react-native';
 import firebase from 'react-native-firebase';
 
 import { AppNavigation } from './src/navigation/AppNavigation'
 import NavigatorService from './src/navigation/Navigator';
 
+import { Provider } from 'react-redux';
+import { store } from './src/store';
+
 export default class App extends Component {
 
     componentDidMount() {
-        this.checkPermission();
-        this.createNotificationListeners();
+        // this.checkPermission();
+        // this.createNotificationListeners();
     }
 
     async checkPermission() {
@@ -95,17 +98,22 @@ export default class App extends Component {
 
     //Remove listeners allocated in createNotificationListeners()
     componentWillUnmount() {
-        this.notificationListener();
-        this.notificationOpenedListener();
+        // this.notificationListener();
+        // this.notificationOpenedListener();
     }
 
     render() {
         return (
-            <AppNavigation
-                ref={navigatorRef => {
-                    NavigatorService.setContainer(navigatorRef);
-                }}
-            />
+            [
+                <Provider key={'provider'} store={store}>
+                    <AppNavigation
+                        key={'AppNavigation'}
+                        ref={navigatorRef => {
+                            NavigatorService.setContainer(navigatorRef);
+                        }}/>
+                </Provider>,
+                <StatusBar key='statusbar' barStyle='light-content' backgroundColor="#000000"/>
+            ]
         );
     }
 }

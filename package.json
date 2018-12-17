@@ -20,7 +20,13 @@
     "react-native-gesture-handler": "^1.0.10",
     "react-native-loading-spinner-overlay": "^0.5.2",
     "react-native-modal-datetime-picker": "^6.0.0",
-    "react-navigation": "^3.0.0"
+    "react-navigation": "^3.0.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

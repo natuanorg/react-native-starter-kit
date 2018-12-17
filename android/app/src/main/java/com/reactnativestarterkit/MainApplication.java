@@ -13,6 +13,8 @@ import com.facebook.soloader.SoLoader;
 import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 import io.invertase.firebase.fabric.crashlytics.RNFirebaseCrashlyticsPackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import io.invertase.firebase.admob.RNFirebaseAdMobPackage;
+import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,7 +36,9 @@ public class MainApplication extends Application implements ReactApplication {
               new RNFirebaseMessagingPackage(),
               new RNFirebaseNotificationsPackage(),
               new RNFirebaseCrashlyticsPackage(),
-              new RNFirebaseAnalyticsPackage()
+              new RNFirebaseAnalyticsPackage(),
+              new RNFirebaseAdMobPackage(),
+              new RNFirebaseRemoteConfigPackage()
       );
     }
 
