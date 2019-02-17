@@ -4,7 +4,6 @@
 
 # Xcode
 #
-Pods/
 build/
 *.pbxuser
 !default.pbxuser
@@ -22,9 +21,6 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-
-google-services.json
-GoogleService-Info.plist
 
 # Android/IntelliJ
 #
