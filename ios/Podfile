@@ -5,10 +5,10 @@ target 'ReactNativeStarterKit' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     # use_frameworks!
     # Pods for RNApp
-    pod 'Firebase/Core', '~> 5.11.0'
-    pod 'Firebase/Messaging', '~> 5.11.0'
-    pod 'Firebase/RemoteConfig', '~> 5.11.0'
-    pod 'Firebase/AdMob', '~> 5.11.0'
+    pod 'Firebase/Core', '~> 5.15.0'
+    pod 'Firebase/Messaging', '~> 5.15.0'
+    pod 'Firebase/RemoteConfig', '~> 5.15.0'
+    pod 'Firebase/AdMob', '~> 5.15.0'
     pod 'Fabric', '~> 1.7.11'
     pod 'Crashlytics', '~> 3.10.7'
     pod 'React', :path => '../node_modules/react-native', :subspecs => [
@@ -26,7 +26,9 @@ target 'ReactNativeStarterKit' do
     pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
     pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
     pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-    pod 'GoogleAppMeasurement', '~> 5.3.0'
+    pod 'GoogleAppMeasurement', '~> 5.4.0'
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
     post_install do |installer|
         installer.pods_project.targets.each do |target|
           # The following is needed to ensure the "archive" step works in XCode.

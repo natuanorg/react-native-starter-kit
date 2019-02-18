@@ -9,17 +9,18 @@
     "test": "jest",
     "iosx": "react-native run-ios --simulator='iPhone X'",
     "ios": "react-native run-ios --simulator='iPhone 6'",
-    "android": "react-native run-android"
+    "android": "react-native run-android --appId vn.react.native.starter.kit"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "lodash": "^4.17.10",
     "react": "16.6.3",
     "react-native": "0.58.4",
-    "react-native-firebase": "^5.0.0",
+    "react-native-firebase": "^5.2.2",
     "react-native-gesture-handler": "^1.0.10",
     "react-native-loading-spinner-overlay": "^0.5.2",
     "react-native-modal-datetime-picker": "^6.0.0",
+    "react-native-vector-icons": "^6.3.0",
     "react-navigation": "^3.0.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
